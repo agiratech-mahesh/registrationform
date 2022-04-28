@@ -15,7 +15,7 @@ pipeline {
                                     steps {
                                         echo "Hello"
                                     }
-                                    
+                                    }
                                     stage('three') {
                                         parallel {
                                             stage('Unit Test') {
@@ -26,12 +26,7 @@ pipeline {
                                                     stage('Integration test') {
                                                         steps {
                                                             echo "Running the integration test..."
-                                                           post{
                                                           
-                                                            failure {
-            mail to: mahesh.m@agiratech.com, subject: 'The Pipeline failed :('
-        }
-        }
                                                             
 }
 }
